@@ -5,13 +5,10 @@ group_anagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
 should return (order of groups doesn't matter):
 [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
 """
-
+str.join
 def group_anagrams(input_list):
     output_groups = []
-    words_dict = {}
-
-
-    
+    words_dict = {} 
     for word in input_list:
         sorted_word = str(sorted(word.lower())) # A list of char, the aggregate them --> Suggestion from AI marker: "".join(sorted(word.lower())) would be better
         if sorted_word not in words_dict:
@@ -22,4 +19,4 @@ def group_anagrams(input_list):
     for _, values in words_dict.items():
         output_groups.append(values)
     
-    return output_groups
+    return output_groups 
